@@ -1,4 +1,4 @@
-# ML-Cervical-Cancer-Risk-Prediction 🧬🤖
+# ML-Cervical-Cancer-Risk-Prediction 
 
 Este repositorio contiene el desarrollo y despliegue de un pipeline de **Machine Learning** diseñado para el triaje predictivo de riesgo de neoplasia cervical, utilizando el conjunto de datos clínicos *Cervical Cancer Risk Factors*. 
 
@@ -16,14 +16,14 @@ Tras evaluar las arquitecturas sobre el subconjunto de prueba `X_test_selected`,
 | Red Neuronal (MLP) | 0.7732 | 18.18% | 0.0930 |
 | LightGBM | 0.8895 | 9.09% | 0.0952 |
 
-### 🧠 Justificación de la Arquitectura Óptima
+### Justificación de la Arquitectura Óptima
 Aunque *LightGBM* registra la mayor exactitud global (88.95%), el proyecto demuestra la presencia de la **Paradoja de la Exactitud (*Accuracy Paradox*)** [12]. En contextos de triaje oncológico, optimizar bajo el *Accuracy* genera un sesgo crítico que invisibiliza los falsos negativos [13]. 
 
 Al ser el único algoritmo capaz de sostener una estabilidad matemática real sobre la clase minoritaria, triplicando el F1-Score de los modelos complejos, la **Regresión Logística Regularizada** se selecciona como la arquitectura óptima para el despliegue.
 
 ---
 
-## 🔍 Explicabilidad Global mediante Valores SHAP
+##  Explicabilidad Global mediante Valores SHAP
 
 El modelo integra una capa de interpretabilidad basada en **SHAP** (*SHapley Additive exPlanations*) para garantizar la transparencia clínica:
 * **Vectores de Alto Riesgo (SHAP > 0):** Patologías específicas como `STDs:vulvo-perineal condylomatosis`, `STDs:HIV`, `Dx:HPV` y diagnósticos previos (`Dx:CIN`), junto a factores acumulativos como años de tabaquismo.
@@ -31,7 +31,7 @@ El modelo integra una capa de interpretabilidad basada en **SHAP** (*SHapley Add
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 * **Lenguaje:** Python 3
 * **Librerías Core:** Scikit-Learn, LightGBM, Imbalanced-Learn (SMOTE)
 * **Interpretabilidad:** SHAP (SHapley Additive exPlanations)
@@ -39,6 +39,6 @@ El modelo integra una capa de interpretabilidad basada en **SHAP** (*SHapley Add
 
 ---
 
-## 📚 Referencias Bibliográficas
+##  Referencias Bibliográficas
 * [12] F. J. Valverde-Albacete and C. Peláez-Moreno, "100% Classification Accuracy Considered Harmful: The Normalized Information Transfer Factor Explains the Accuracy Paradox," *PLOS ONE*, vol. 9, no. 1, 2014.
 * [13] D. Chicco and G. Jurman, "The advantages of the Matthews correlation coefficient (MCC) over F1 score and accuracy in binary classification evaluation," *BMC Genomics*, vol. 21, no. 1, 2020.
