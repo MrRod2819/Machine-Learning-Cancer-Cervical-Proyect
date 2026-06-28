@@ -6,7 +6,7 @@ El objetivo primordial es maximizar la identificación de pacientes en riesgo (C
 
 ---
 
-## 📊 Matriz de Rendimiento Comparativo (Tabla 5.1)
+##  Matriz de Rendimiento Comparativo (Tabla 5.1)
 
 Tras evaluar las arquitecturas sobre el subconjunto de prueba `X_test_selected`, se consolidaron los siguientes resultados analíticos:
 
